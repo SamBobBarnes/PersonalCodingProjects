@@ -8,15 +8,11 @@ let canvasy = 600;
 function setup() {
   createCanvas(canvasx,canvasy)
   board = new Board(canvasy);
-
-
-
 }
 
 function draw(){
   background(220);
   board.draw();
-
 }
 
 
