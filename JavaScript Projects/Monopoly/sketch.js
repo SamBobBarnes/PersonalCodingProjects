@@ -20,6 +20,9 @@ function draw(){
 }
 
 
-function mouseReleased(){
 
+function keyPressed(){
+  if(keyCode === 32) {dice1.roll(); dice2.roll();}
+
+  return false;
 }
