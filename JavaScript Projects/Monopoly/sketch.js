@@ -2,7 +2,7 @@
 
 //Canvas Size
 let canvasx = 1425;
-let canvasy = 600;
+let canvasy = 800;
 
 
 function setup() {
