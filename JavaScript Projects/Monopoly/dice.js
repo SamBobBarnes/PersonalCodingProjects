@@ -1,20 +1,12 @@
 class Dice {
-  constructor(face,x,y) {
+  constructor(face,die1,boardHeight) {
     this.face = face;
-    this.width = 50;
-    this.dot = 8;
-    this.y = y;
-    this.x = x;
-    this.held = false;
+    this.width = boardHeight/16;
+    this.dot = boardHeight/100;
+    this.y = boardHeight-(boardHeight/8)*1.6;
+    if (die1) this.x = (boardHeight/8)*1.1;
+    else this.x = (boardHeight/8)*1.7;
     this.fillColor = "white";
-    this.holdColor = 220;
-
-
-    //  Click Area
-    this.wMin = this.x;
-    this.hMin = this.y;
-    this.wMax = this.x + this.width;
-    this.hMax = this.y + this.width;
   }
 
   roll() {
@@ -23,10 +15,6 @@ class Dice {
 
 
   draw(){
-    fill(this.holdColor);
-    noStroke();
-    rect(this.x,this.y+52,this.width,10);
-    stroke("black");
     fill(this.fillColor);
     square(this.x,this.y,this.width);
     switch (this.face) {
@@ -41,20 +29,6 @@ class Dice {
 
   }
 
-  hold(){
-    if (this.held) {this.held = false; this.holdColor = 220 /*this.fillColor = "white"/*console.log("Dice Unheld");*/}
-    else {this.held = true; this.holdColor = "red" /*this.fillColor = "red"/*console.log("Dice Held");*/}
-  }
-
-  isHeld(){
-    return this.held;
-  }
-
-  mouseReleased(){
-    if (winMouseX > this.wMin && winMouseX < this.wMax && winMouseY > this.hMin && winMouseY < this.hMax){
-      this.hold();
-    }
-  }
 
   read(){
     return this.face;
