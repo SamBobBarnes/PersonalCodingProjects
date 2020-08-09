@@ -1,6 +1,6 @@
 /* property.js */
 
-class Property{
+class Space{
   constructor(xy,height,side/*T-top, B-bottom, L-left, R-right*/,name,color/*orange, red, pink, green, dark blue, light blue, brown, yellow*/,price,blank){
     this.name = name;
     this.x = xy[0];
