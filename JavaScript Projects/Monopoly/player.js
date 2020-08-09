@@ -38,7 +38,7 @@ class Player{
   removeProperty(prop){
     var newProps = [];
     this.properties.forEach((item, i) => {
-      if(item.name != prop){
+      if(item != prop){
         newProps.push(item);
       }
     });

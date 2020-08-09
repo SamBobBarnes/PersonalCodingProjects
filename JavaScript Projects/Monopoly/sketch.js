@@ -17,6 +17,7 @@ function draw(){
   board.draw();
   dice1.draw();
   dice2.draw();
+  gameloop();
 }
 
 

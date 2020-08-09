@@ -1,1 +1,6 @@
 /* gamelogic.js */
+
+
+function gameloop(){
+  
+}
