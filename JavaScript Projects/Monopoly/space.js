@@ -1,4 +1,4 @@
-/* property.js */
+/* space.js */
 
 class Space{
   constructor(xy,height,side/*T-top, B-bottom, L-left, R-right*/,name,color/*orange, red, pink, green, dark blue, light blue, brown, yellow*/,price,blank){
