@@ -21,9 +21,9 @@ function draw(){
 }
 
 
-
+// check for pressed keys for interaction
 function keyPressed(){
-  if(keyCode === 32) {dice1.roll(); dice2.roll();}
+  if(keyCode === 32) {dice1.roll(); dice2.roll();} //spacebar
 
   return false;
 }
