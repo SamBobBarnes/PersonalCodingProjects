@@ -14,15 +14,15 @@ class Board{
     this.pos7 = false;
     this.pos8 = false;
 
-    this.pos0xo = true;
-    this.pos1xo = true;
-    this.pos2xo = true;
-    this.pos3xo = true;
-    this.pos4xo = true;
-    this.pos5xo = true;
-    this.pos6xo = true;
-    this.pos7xo = true;
-    this.pos8xo = true;
+    this.pos0xo = false;
+    this.pos1xo = false;
+    this.pos2xo = false;
+    this.pos3xo = false;
+    this.pos4xo = false;
+    this.pos5xo = false;
+    this.pos6xo = false;
+    this.pos7xo = false;
+    this.pos8xo = false;
   }
 
   xyGen(pos){
@@ -51,7 +51,9 @@ class Board{
   }
 
   o(pos){
-
+    var xy = this.xyGen(pos);
+    strokeWeight(5);
+    circle(xy[0],xy[1],this.off*2);
   }
 
   mark(pos,xo,blank){
