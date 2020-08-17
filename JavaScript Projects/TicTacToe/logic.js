@@ -1,4 +1,5 @@
 /* logic.js */
+<<<<<<< HEAD
 
 
 function minimax(position, depth, isMaximizing){
@@ -13,3 +14,5 @@ function minimax(position, depth, isMaximizing){
     let bestScore = Infinity;
   }
 }
+=======
+>>>>>>> d385121d691e23a427c0c8c3bbae29fa7e00282f
