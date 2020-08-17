@@ -1,10 +1,12 @@
 /* player.js */
 
 class Player{
-  constructor(name){
+  constructor(name,piece,boardHeight){
     this.name = name;
     this.money = 1500;
     this.properties = [];
+    this.position = 1;
+    this.piece = new Piece(piece,boardHeight,this.position);
   }
 
   getName() {
@@ -45,5 +47,17 @@ class Player{
     this.properties = newProps;
   }
 
+  getPos(){
+    return this.position;
+  }
+
+  setPos(pos){
+    this.position = pos;
+    this.piece.setPos(pos);
+  }
+
+  draw(){
+    this.piece.draw();
+  }
 
 }

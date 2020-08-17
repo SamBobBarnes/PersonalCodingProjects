@@ -1,7 +1,7 @@
 /* piece.js */
 
 class Piece{
-  constructor(player,boardHeight){
+  constructor(player,boardHeight,pos){
     this.player = player;
     this.corner = boardHeight/8;
     this.bottom = boardHeight;
@@ -12,7 +12,7 @@ class Piece{
     this.offset37 = this.unit - this.corner/25 - this.height;
 
 
-    this.position = 11;
+    this.position = pos;
 
   }
 
@@ -214,6 +214,10 @@ class Piece{
         case 40: square(this.bottom - this.offset15 - this.height,this.offset3 + this.corner + this.unit*8,this.height); break; //40
       }
     }
+  }
+
+  setPos(pos){
+    this.position = pos;
   }
 
 
