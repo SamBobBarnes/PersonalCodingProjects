@@ -2,11 +2,87 @@
 
 class Board{
   constructor(boardDim){
-    this.dimension = boardDim;
+    this.dim = boardDim;
+    this.off = this.dim/10;
+    this.pos0 = false;
+    this.pos1 = false;
+    this.pos2 = false;
+    this.pos3 = false;
+    this.pos4 = false;
+    this.pos5 = false;
+    this.pos6 = false;
+    this.pos7 = false;
+    this.pos8 = false;
+
+    this.pos0xo = true;
+    this.pos1xo = true;
+    this.pos2xo = true;
+    this.pos3xo = true;
+    this.pos4xo = true;
+    this.pos5xo = true;
+    this.pos6xo = true;
+    this.pos7xo = true;
+    this.pos8xo = true;
+  }
+
+  xyGen(pos){
+    var xy = [0,0];
+
+    switch(pos){
+        case 0: xy = [0,0]; break;
+        case 1: xy = [this.dim*(1/3),0]; break;
+        case 2: xy = [this.dim*(2/3),0]; break;
+        case 3: xy = [0,this.dim*(1/3)]; break;
+        case 4: xy = [this.dim*(1/3),this.dim*(1/3)]; break;
+        case 5: xy = [this.dim*(2/3),this.dim*(1/3)]; break;
+        case 6: xy = [0,this.dim*(2/3)]; break;
+        case 7: xy = [this.dim*(1/3),this.dim*(2/3)]; break;
+        case 8: xy = [this.dim*(2/3),this.dim*(2/3)]; break;
+    }
+
+    return xy;
+  }
+
+  x(pos){
+    var xy = this.xyGen(pos);
+    strokeWeight(5);
+    line(xy[0]+this.off,xy[1]+this.off,xy[0]+this.dim/3-this.off,xy[1]+this.dim/3-this.off);
+    line(xy[0]+this.dim/3-this.off,xy[1]+this.off,xy[0]+this.off,xy[1]+this.dim/3-this.off);
+  }
+
+  o(pos){
 
   }
 
+  mark(pos,xo,blank){
+    if(!blank){
+      if(xo){
+        this.x(pos);
+      } else {
+        this.o(pos);
+      }
+    }
+  }
+
   draw(){
-    
+    strokeWeight(10);
+    line(this.dim/3-5,0,this.dim/3-5,this.dim);
+    line(this.dim*(2/3)-5,0,this.dim*(2/3)-5,this.dim);
+    line(0,this.dim/3-5,this.dim,this.dim/3-5);
+    line(0,this.dim*(2/3)-5,this.dim,this.dim*(2/3)-5);
+    strokeWeight(20);
+    line(0,0,this.dim,0);
+    line(0,0,0,this.dim);
+    line(0,this.dim,this.dim,this.dim);
+    line(this.dim,0,this.dim,this.dim);
+    this.mark(0,this.pos0xo,this.pos0);
+    this.mark(1,this.pos1xo,this.pos1);
+    this.mark(2,this.pos2xo,this.pos2);
+    this.mark(3,this.pos3xo,this.pos3);
+    this.mark(4,this.pos4xo,this.pos4);
+    this.mark(5,this.pos5xo,this.pos5);
+    this.mark(6,this.pos6xo,this.pos6);
+    this.mark(7,this.pos7xo,this.pos7);
+    this.mark(8,this.pos8xo,this.pos8);
   }
 }
