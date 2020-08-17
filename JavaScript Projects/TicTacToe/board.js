@@ -29,15 +29,15 @@ class Board{
     var xy = [0,0];
 
     switch(pos){
-        case 0: xy = [0,0]; break;
-        case 1: xy = [this.dim*(1/3),0]; break;
-        case 2: xy = [this.dim*(2/3),0]; break;
-        case 3: xy = [0,this.dim*(1/3)]; break;
-        case 4: xy = [this.dim*(1/3),this.dim*(1/3)]; break;
-        case 5: xy = [this.dim*(2/3),this.dim*(1/3)]; break;
-        case 6: xy = [0,this.dim*(2/3)]; break;
-        case 7: xy = [this.dim*(1/3),this.dim*(2/3)]; break;
-        case 8: xy = [this.dim*(2/3),this.dim*(2/3)]; break;
+        case 0: xy = [this.dim*(1/6),this.dim*(1/6)]; break;
+        case 1: xy = [this.dim*(3/6),this.dim*(1/6)]; break;
+        case 2: xy = [this.dim*(5/6),this.dim*(1/6)]; break;
+        case 3: xy = [this.dim*(1/6),this.dim*(3/6)]; break;
+        case 4: xy = [this.dim*(3/6),this.dim*(3/6)]; break;
+        case 5: xy = [this.dim*(5/6),this.dim*(3/6)]; break;
+        case 6: xy = [this.dim*(1/6),this.dim*(5/6)]; break;
+        case 7: xy = [this.dim*(3/6),this.dim*(5/6)]; break;
+        case 8: xy = [this.dim*(5/6),this.dim*(5/6)]; break;
     }
 
     return xy;
@@ -46,8 +46,8 @@ class Board{
   x(pos){
     var xy = this.xyGen(pos);
     strokeWeight(5);
-    line(xy[0]+this.off,xy[1]+this.off,xy[0]+this.dim/3-this.off,xy[1]+this.dim/3-this.off);
-    line(xy[0]+this.dim/3-this.off,xy[1]+this.off,xy[0]+this.off,xy[1]+this.dim/3-this.off);
+    line(xy[0]-this.off,xy[1]-this.off,xy[0]+this.off,xy[1]+this.off);
+    line(xy[0]+this.off,xy[1]-this.off,xy[0]-this.off,xy[1]+this.off);
   }
 
   o(pos){
@@ -66,10 +66,10 @@ class Board{
 
   draw(){
     strokeWeight(10);
-    line(this.dim/3-5,0,this.dim/3-5,this.dim);
-    line(this.dim*(2/3)-5,0,this.dim*(2/3)-5,this.dim);
-    line(0,this.dim/3-5,this.dim,this.dim/3-5);
-    line(0,this.dim*(2/3)-5,this.dim,this.dim*(2/3)-5);
+    line(this.dim/3,0,this.dim/3,this.dim);
+    line(this.dim*(2/3),0,this.dim*(2/3),this.dim);
+    line(0,this.dim/3,this.dim,this.dim/3);
+    line(0,this.dim*(2/3),this.dim,this.dim*(2/3));
     strokeWeight(20);
     line(0,0,this.dim,0);
     line(0,0,0,this.dim);
