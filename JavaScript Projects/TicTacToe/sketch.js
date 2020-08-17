@@ -1,15 +1,18 @@
+/* sketch.js */
+
 //Canvas Size
-let canvasx = 800;
-let canvasy = 400;
+let canvasDim = 400;
+
 
 
 
 function setup() {
-  createCanvas(canvasx,canvasy)
+  createCanvas(canvasDim,canvasDim);
+  board = new Board(canvasDim);
 
 }
 
 function draw(){
   background(220);
-
+  board.draw();
 }
