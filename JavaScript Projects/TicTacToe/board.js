@@ -4,15 +4,15 @@ class Board{
   constructor(boardDim){
     this.dim = boardDim;
     this.off = this.dim/10;
-    this.pos0 = false;
-    this.pos1 = false;
-    this.pos2 = false;
-    this.pos3 = false;
-    this.pos4 = false;
-    this.pos5 = false;
-    this.pos6 = false;
-    this.pos7 = false;
-    this.pos8 = false;
+    this.pos0 = true;
+    this.pos1 = true;
+    this.pos2 = true;
+    this.pos3 = true;
+    this.pos4 = true;
+    this.pos5 = true;
+    this.pos6 = true;
+    this.pos7 = true;
+    this.pos8 = true;
 
     this.pos0xo = false;
     this.pos1xo = false;
@@ -56,13 +56,27 @@ class Board{
     circle(xy[0],xy[1],this.off*2);
   }
 
-  mark(pos,xo,blank){
+  mark(pos,x,blank){
     if(!blank){
-      if(xo){
+      if(x){
         this.x(pos);
       } else {
         this.o(pos);
       }
+    }
+  }
+
+  set(pos,x){
+    switch(pos){
+      case 0: this.pos0 = false; if(x){this.pos0xo = true;} break;
+      case 1: this.pos1 = false; if(x){this.pos1xo = true;} break;
+      case 2: this.pos2 = false; if(x){this.pos2xo = true;} break;
+      case 3: this.pos3 = false; if(x){this.pos3xo = true;} break;
+      case 4: this.pos4 = false; if(x){this.pos4xo = true;} break;
+      case 5: this.pos5 = false; if(x){this.pos5xo = true;} break;
+      case 6: this.pos6 = false; if(x){this.pos6xo = true;} break;
+      case 7: this.pos7 = false; if(x){this.pos7xo = true;} break;
+      case 8: this.pos8 = false; if(x){this.pos8xo = true;} break;
     }
   }
 
