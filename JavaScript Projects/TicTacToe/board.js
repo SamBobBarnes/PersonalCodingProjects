@@ -68,15 +68,15 @@ class Board{
 
   set(pos,x){
     switch(pos){
-      case 0: this.pos0 = false; if(x){this.pos0xo = true;} break;
-      case 1: this.pos1 = false; if(x){this.pos1xo = true;} break;
-      case 2: this.pos2 = false; if(x){this.pos2xo = true;} break;
-      case 3: this.pos3 = false; if(x){this.pos3xo = true;} break;
-      case 4: this.pos4 = false; if(x){this.pos4xo = true;} break;
-      case 5: this.pos5 = false; if(x){this.pos5xo = true;} break;
-      case 6: this.pos6 = false; if(x){this.pos6xo = true;} break;
-      case 7: this.pos7 = false; if(x){this.pos7xo = true;} break;
-      case 8: this.pos8 = false; if(x){this.pos8xo = true;} break;
+      case 0: if(this.pos0) {this.pos0 = false; if(x){this.pos0xo = true;}} break;
+      case 1: if(this.pos1) {this.pos1 = false; if(x){this.pos1xo = true;}} break;
+      case 2: if(this.pos2) {this.pos2 = false; if(x){this.pos2xo = true;}} break;
+      case 3: if(this.pos3) {this.pos3 = false; if(x){this.pos3xo = true;}} break;
+      case 4: if(this.pos4) {this.pos4 = false; if(x){this.pos4xo = true;}} break;
+      case 5: if(this.pos5) {this.pos5 = false; if(x){this.pos5xo = true;}} break;
+      case 6: if(this.pos6) {this.pos6 = false; if(x){this.pos6xo = true;}} break;
+      case 7: if(this.pos7) {this.pos7 = false; if(x){this.pos7xo = true;}} break;
+      case 8: if(this.pos8) {this.pos8 = false; if(x){this.pos8xo = true;}} break;
     }
   }
 
