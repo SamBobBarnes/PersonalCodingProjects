@@ -4,16 +4,21 @@
 let canvasDim = 400;
 var turn = true;
 
+let board = [
+  ['','',''],
+  ['','',''],
+  ['','','']
+]
 
 
 function setup() {
   createCanvas(canvasDim,canvasDim);
-  board = new Board(canvasDim);
+  boardGraphics = new Board(canvasDim);
 
 }
 
 function draw(){
-  board.draw();
+  boardGraphics.draw();
 }
 
 function keyPressed(){
