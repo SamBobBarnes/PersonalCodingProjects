@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
-import ParentComp from './Components/ParentComp'
+import RefsDemo from './Components/RefsDemo'
+
 
 
 
@@ -9,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <ParentComp />
+        <RefsDemo />
       </div>
     )
   }
@@ -42,10 +43,12 @@ export default App
 // import LifecycleA from './Components/LifecycleA'
 // import FragmentDemo from './Components/FragmentDemo'
 // import Table from './Components/Table'
+// import ParentComp from './Components/ParentComp'
 
 // function App() {
 //   return (
 //     <div className="App">
+//        {/* <ParentComp /> */}
 //       {/* <Table /> */}
 //       {/* <FragmentDemo /> */}
 //       {/* <Form /> */}
