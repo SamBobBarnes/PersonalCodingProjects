@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
 import './App.css'
-import PortalDemo from './Components/PortalDemo'
-
-
+import Hero from './Components/Hero'
+import ErrorBoundary from './Components/ErrorBoundary'
 
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <PortalDemo />
+        <ErrorBoundary>
+          <Hero heroName='BatMan' />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName='Superman' />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName='Joker' />
+          </ErrorBoundary>
       </div>
     )
   }
@@ -46,10 +53,12 @@ export default App
 // import RefsDemo from './Components/RefsDemo'
 // import FocusInput from './Components/FocusInput'
 // import FRParentInput from './Components/FRParentInput'
+// import PortalDemo from './Components/PortalDemo'
 
 // function App() {
 //   return (
 //     <div className="App">
+//       {/* <PortalDemo /> */}
 //       {/* <FRParentInput /> */}
 //       {/* <FocusInput /> */}
 //       {/* <RefsDemo /> */}
