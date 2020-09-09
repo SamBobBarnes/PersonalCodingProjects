@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import './App.css'
-import LifecycleA from './Components/LifecycleA'
+import FragmentDemo from './Components/FragmentDemo'
+import Table from './Components/Table'
+
 
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <LifecycleA />
+        <Table />
+        {/* <FragmentDemo /> */}
       </div>
     )
   }
@@ -37,11 +40,13 @@ export default App
 // import './AppStyles.css'
 // import styles from './AppStyles.module.css'
 // import Form from './Components/Form'
+// import LifecycleA from './Components/LifecycleA'
 
 // function App() {
 //   return (
 //     <div className="App">
 //       {/* <Form /> */}
+//       {/* <LifecycleA /> */}
 //       {/* <h1 className='error'>Error</h1>
 //       <h1 className={styles.success}>Success</h1> */}
 //       {/* <Inline /> */}
