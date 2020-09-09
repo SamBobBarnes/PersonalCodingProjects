@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
-import Form from './Components/Form'
+import LifecycleA from './Components/LifecycleA'
+
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Form />
+        <LifecycleA />
       </div>
     )
   }
@@ -35,10 +36,12 @@ export default App
 // import Inline from './Components/Inline';
 // import './AppStyles.css'
 // import styles from './AppStyles.module.css'
+// import Form from './Components/Form'
 
 // function App() {
 //   return (
 //     <div className="App">
+//       {/* <Form /> */}
 //       {/* <h1 className='error'>Error</h1>
 //       <h1 className={styles.success}>Success</h1> */}
 //       {/* <Inline /> */}
