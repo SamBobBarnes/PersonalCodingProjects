@@ -1,15 +1,28 @@
 import React, { Component } from 'react'
 import './App.css'
-import ClickCounter from './Components/ClickCounter'
-import HoverCounter from './Components/HoverCounter'
+import ClickCounterTwo from './Components/ClickCounterTwo'
+import HoverCounterTwo from './Components/HoverCounterTwo'
+import User from './Components/User'
+import CounterTwo from './Components/CounterTwo'
 
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <ClickCounter name='Samuel'/>
-        <HoverCounter />
+        <CounterTwo>
+          {(count, incrementCount) => (
+            <ClickCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
+        <CounterTwo>
+          {(count, incrementCount) => (
+            <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
+        {/* <ClickCounterTwo />
+        <HoverCounterTwo />
+        <User render={ (isLoggedIn) => isLoggedIn ? 'Samuel' : 'Guest'}/> */}
       </div>
     )
   }
@@ -49,10 +62,14 @@ export default App
 // import PortalDemo from './Components/PortalDemo'
 // import Hero from './Components/Hero'
 // import ErrorBoundary from './Components/ErrorBoundary'
+// import ClickCounter from './Components/ClickCounter'
+// import HoverCounter from './Components/HoverCounter'
 
 // function App() {
 //   return (
 //     <div className="App">
+//       {/* <ClickCounter name='Samuel'/> */}
+//       {/* <HoverCounter /> */}
 //       {/* <ErrorBoundary>
 //         <Hero heroName='BatMan' />
 //       </ErrorBoundary>
