@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import ComponentC from './Components/ComponentC'
-import { UserProvider } from './Components/userContext'
+
 
 
 
@@ -9,9 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <UserProvider value="Samuel">
-          <ComponentC />
-        </UserProvider>
+
       </div>
     )
   }
@@ -57,10 +54,15 @@ export default App
 // import HoverCounterTwo from './Components/HoverCounterTwo'
 // import User from './Components/User'
 // import CounterTwo from './Components/CounterTwo'
+// import ComponentC from './Components/ComponentC'
+// import { UserProvider } from './Components/userContext'
 
 // function App() {
 //   return (
 //     <div className="App">
+//       {/* <UserProvider value="Samuel">
+//         <ComponentC />
+//       </UserProvider> */}
 //       {/* <CounterTwo>
 //         {(count, incrementCount) => (
 //           <ClickCounterTwo count={count} incrementCount={incrementCount} />
